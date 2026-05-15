@@ -80,8 +80,9 @@ class TestBooksCollector:
 
     def test_get_books_genre_one_book_one_genre_shows_true(self, collector):
         collector.add_new_book('Test book 1')
+        collector.set_book_genre('Test book 1', 'Мультфильмы')
 
-        assert collector.books_genre == collector.get_books_genre()
+        assert collector.get_books_genre() == {'Test book 1':'Мультфильмы'}
 
     @pytest.mark.parametrize(
         'names,genres,count_children_books',
