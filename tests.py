@@ -52,9 +52,8 @@ class TestBooksCollector:
     @pytest.mark.parametrize(
         'name,genre',
         [
-            ['Тестовая книга 1', 'Мультфильмы'], 
-            ['Тестовая книга 2', 'Детективы'],
-            ['Тестовая книга 3', 'Ужасы']
+            ['1', 'Мультфильмы'], 
+            ['4012345678901234567890123456789012345678', 'Детективы']
         ]
     )
     def test_get_book_genre_one_book_shows_true(self, collector, name, genre):    
